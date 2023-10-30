@@ -1,0 +1,37 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+<div class="divi">
+    <div class="to"> <p class="p1">Thank You for your order</p> <p class="p2">{{food.name}}</p>
+        <form method="POST" action="{% url 'order' food.id%}">
+          {% csrf_token %}
+          <h1>CASH ON DELIVERY</h1>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Your Order</label>
+              <input class="form-control"value="{{food.name}}" name="item">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Your name</label>
+              <input class="form-control" name='name'>
+            </div>
+            <div class="mb">
+                <div>
+            <label for="exampleInputEmail1" class="form-label">Date of journey</label>
+            <input type="date"  class="form-control"  name='date'>
+            <label for="exampleInputEmail1" class="form-label">Train number</label>
+            <input type="number"  class="form-control" name='Train'>
+            <label for="exampleInputEmail1" class="form-label">Count of {{food.name}}</label>
+            <input type="number"  class="form-control" name='co'>
+        </div>
+            </div>
+            <label for="exampleInputEmail1" class="form-label">Mobile NO:</label>
+            <input type="number"  class="form-control"  name='contact'>
+            <label for="exampleInputEmail1" class="form-label">Seat No</label>
+            <input type="number"  class="form-control"  name='seat'>
+            <label for="exampleInputEmail1" class="form-label">Station At which you pick Your food</label>
+            <input type="number"  class="form-control"  name='Station'>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form></div>
+    </div>
+    
+{% endblock %}

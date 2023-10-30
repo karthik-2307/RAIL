@@ -1,0 +1,66 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+<div class="home" >   
+    <div class="h">
+    <p>LIFE IS SHORT</P><P>AND WORLD IS WIDE</P>
+    </div>
+    {% comment %} <div  class="h"> {% endcomment %}
+    {% comment %} <p>To get the best of your adventure you just need to leave and </br>And go where you like.We are waiting for you...!!!</p> {% endcomment %}
+{% comment %} </div> {% endcomment %}
+</br>
+{% if user.is_authenticated %}
+{% comment %} <button type="button" class="btn btn-primary"><a>BOOK TICKETS</a></button> {% endcomment %}
+<a class="btn btn-primary"  href="{% url 'index' %}" role="button">BOOK TICKETS</a>
+{% else %}
+<p>Not Loged in</p>
+<a class="btn btn-primary"  href="{% url 'login' %}" role="button">LOG IN</a>
+{% endif %}
+    </div>
+<div id="section2">
+    <div class="about">
+    <h2>ABOUT</h2>
+    </div>
+   <p>Introduction: Start with a brief introduction to the airline. Mention its name, when it was founded, and where it is headquartered.
+
+    Mission and Values: Describe the airline's mission statement and core values. This can include commitments to safety, customer service, sustainability, and more.
+    
+    History: Provide a concise history of the airline. Highlight significant milestones, such as when it was founded, major expansions, and any important events in its history.
+    
+    Fleet Information: Mention the types of aircraft in the airline's fleet. You can include details like the number of aircraft, their seating capacities, and any special features.
+    
+    Route Network: Briefly discuss the airline's route network. Mention key destinations served and any unique routes or partnerships that set the airline apart.
+    
+    Awards and Recognitions: If the airline has received any awards or recognitions for excellence in service, safety, or sustainability, highlight them in this section.
+    
+    Customer Service Commitment: Explain the airline's commitment to providing excellent customer service. This can include information about customer support channels, loyalty programs, and passenger amenities.
+    
+    Safety and Security: Assure customers of the airline's commitment to safety and security. Mention any certifications or safety records that demonstrate the airline's dedication to passenger safety.
+    
+    Environmental Initiatives: If the airline has any sustainability or environmental initiatives, share them here. This can include information about fuel-efficient aircraft, carbon offset programs, and other eco-friendly practices.
+    
+    Contact Information: Provide contact details for customer inquiries, including phone numbers, email addresses, and physical addresses.
+    
+    FAQs: Consider including a list of frequently asked questions and answers related to the airline's services, policies, and procedures.
+    
+    Leadership Team: Optionally, you can introduce key members of the airline's leadership team, such as the CEO and senior executives.
+    
+    Media and Press: Include links to press releases, news articles, and media resources about the airline.
+    
+    Careers: If applicable, provide information about job opportunities and careers at the airline.
+    
+    Social Responsibility: If the airline is involved in any corporate social responsibility or community engagement initiatives, briefly discuss them in this section.
+    
+    Partnerships: Mention any strategic partnerships or alliances the airline has with other companies or airlines.</p>
+</div>    
+<div id="section3">
+    <h2>SERVICES</h2>
+    The five processes that make up this traveler/airline contact are seat booking, ancillary booking, payment, ticket confirmation, check-in and boarding, and luggage reclaim.
+</div>    
+<div id="section3">
+    <h3>CONTCT NO:123456789</h3>
+</div>    
+<div class="boot">
+<a class="btn btn-primary"  href="{% url 'home' %}" role="button">GO TO TOP</a>
+</div>
+{% endblock %}

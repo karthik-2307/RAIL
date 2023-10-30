@@ -1,0 +1,16 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+<ul class="list-group">
+    <li class="list-group-item">
+        {{i}} 
+        <br>
+        <marquee class="marq" direction = "left" loop="" >
+            <img src="{{i.a_img}}" width="400px">
+            <img src="{{i.b_img}}"  width="400px">
+            <img src="{{i.b_img}}" width="400px"> 
+        </marquee>
+        <a href="{% url 'order' i.id %}" class="btn btn-primary">Order Now</a><span class="badge" ></span></li>
+       </span></li>
+  </ul>
+{% endblock %}

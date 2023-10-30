@@ -1,0 +1,17 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+<h4>TRAINS AVAILABLE</h4>
+<ul class="list-group">
+    {%for i in train %}
+    <li class="list-group-item">
+        {% comment %} <h3>{{i.train_name}}</h5> {% endcomment %}
+        <h5>{{i.train_no}}-{{i.train_name}}</h5>
+        <h3>Running from {{i.starting}} to {{i.ending}}</h3>
+        {{i}} </br> 
+        Route of the train is:{{i.route}}
+        </br>
+        <a href="{% url 'train_booking' i.id %}" class="btn btn-primary">BOOK NOW</a><span class="badge" ></span></li>
+  </ul>
+  {% endfor %}
+{% endblock %}

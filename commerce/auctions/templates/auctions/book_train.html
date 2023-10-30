@@ -1,0 +1,40 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+<div class="divi">
+    <div class="to"> <p class="p1">WHERE WOULD YOU</p> <p class="p2">LIKE TO GO ?</p>
+        <form method="POST" action="{% url 'index'%}">
+          {% csrf_token %}
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">FROM</label>
+              <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name='from_add'>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">TO</label>
+              <input class="form-control" name='to_add'>
+            </div>
+            <div class="mb">
+                <div>
+            <label for="exampleInputEmail1" class="form-label">DATE</label>
+            <input type="date"  class="form-control"  name='date'>
+            <label for="exampleInputEmail1" class="form-label">Passenger Count</label>
+            <input type="number"  class="form-control" name='count'>
+        </div>
+            </div>
+            <label for="exampleInputEmail1" class="form-label">Mobile NO:</label>
+            <input type="number"  class="form-control"  name='contact'>
+            {% comment %} <div class="mb-3 form-check" style="margin-top: 10px;">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">One way</label>
+            </div>
+            
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Two way</label>
+              </div>
+             {% endcomment %}
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form></div>
+    </div>
+    
+{% endblock %}

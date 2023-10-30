@@ -1,0 +1,10 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+<ul class="list-group">
+    {%for i in food %}
+    <li class="list-group-item">
+        <img src="{{i.a_img}}" width="250px"> {{i}}  <a href="{% url 'display_food' i.id %}" class="btn btn-primary">Go to listing</a><span class="badge" ></span></li>
+  </ul>
+  {% endfor %}
+{% endblock %}

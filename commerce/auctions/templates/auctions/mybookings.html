@@ -1,0 +1,11 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+
+<ul class="list-group">
+    {%for i in books %}
+    <li class="list-group-item">{{i}} <span class="badge"></span></li>
+  </ul>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,189 @@
+body {
+    padding: 10px;
+}
+html {
+    scroll-behavior: smooth;
+  }
+#section2
+{
+    margin: 3%;
+    color: white;
+    font-weight: 300;
+}
+.booked
+{
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
+#section3
+{
+    margin: 3%;
+    color: white;
+    font-weight: 300;
+}
+.boot
+{
+    justify-content: center;
+    text-align: center;
+}
+.home
+{
+    text-align: left;
+    text-decoration: none;
+    margin-top: 7%;
+    margin-left: 5%;
+    letter-spacing: 2%;
+    /* color: white; */
+}
+.h
+{
+    /* word-spacing: 5%; */
+    font-size: 25px;
+    font-weight: bolder;
+    font-size: xx-large;
+    margin-top: 7%;
+    /* margin-left: 5%; */
+    letter-spacing: 2%;
+    color: white;
+}
+.section
+{
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+    text-decoration: none;
+    
+    font-family:cursive;
+}
+a{
+    padding-right: 5%;
+    text-decoration: none;
+}
+.title
+{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 0.50cm;
+    justify-content: center;
+    text-align: center;
+    font-size: xx-large;
+    margin-bottom: 10px;
+    color: white;
+}
+.divi
+{
+    margin-top:5% ;
+    justify-content: center;
+   
+}
+.p1
+{
+    font-weight: 25px;
+    font-size: 45px;
+}
+.p2
+{
+    font-weight: bolder;
+    font-size: xx-large;
+}
+.form-control
+{
+    width: 500px;
+}
+.he 
+{
+    padding-left: 50%;
+}
+.mb
+{
+    display: flex;
+}
+.to
+{
+    color: white;
+   margin-left: 15%;
+ 
+}
+.name
+{
+    color: white;
+    position: fixed;
+   
+    display: block;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    padding-left: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a:hover
+{
+    color: white;
+    text-decoration: none;
+}
+body 
+{
+    background-color: black;
+    background-image: url("https://wallpaperaccess.com/full/1287373.jpg");
+    /* image-rendering: none; */
+    /* image-rendering: auto; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.check1
+{
+    justify-content: center;
+    display: flex;
+    /* text-align: right; */
+}
+.dropdown {
+    display: inline-block;
+    position: relative;
+    padding-right: 3%;
+    /* float: right; */
+    /* flex-direction: row-reverse; */
+    
+  }
+  
+  button{
+    border:none;
+    border-radius:5px;
+    padding:15px 30px;
+    font-size:18px;
+    cursor:pointer;
+
+  }
+  
+  button:hover{
+    background-color:#ddd;
+  }
+  
+  .dropdown-options {
+    display: none;
+    z-index: 2;
+    position: absolute;
+    overflow: auto;
+    background-color:#fff;
+    border-radius:5px;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+  }
+  
+  .dropdown:hover .dropdown-options {
+    display: block;
+  }
+  
+  .dropdown-options a {
+    display: block;
+    color: #000000;
+    padding: 5px;
+    text-decoration: none;
+    padding:20px 40px;
+  }
+  
+  .dropdown-options a:hover {
+    color: #0a0a23;
+    background-color: #ddd;
+    border-radius:5px;
+  }

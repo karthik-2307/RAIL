@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}Auctions{% endblock %}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="{% static 'auctions/styles.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <div>
+            {% if user.is_authenticated %}
+                Signed in as <strong>{{ user.username }}</strong>.
+            {% else %}
+                Not signed in.
+            {% endif %}
+        </div>
+        </head>
+        <body>
+            
+            
+            {% comment %} <div class="main">
+                <div class="section">
+                   <a href="#">HOME</a>
+                    <a class="section" href="{% url 'home' %}">HOME</a>
+                    <a href="#section2">ABOUT</a>
+                    <a href="#section2">SERVICE</a>
+                    <a href="#section3">CONTACT</a>
+                    {% if user.is_authenticated %}
+                    <a class="section" href="{% url 'index' %}">BOOK TICKETS</a>
+                    <a class="section" href="{% url 'booking' %}">VIEW BOOKINGS</a>
+                    <a class="section" href="{% url 'logout' %}">Log Out</a>
+                {% else %}
+                <a class="section" href="{% url 'login' %}">Log In</a>
+                <a class="section" href="{% url 'register' %}">Register</a>
+                {% endif %} {% endcomment %}
+                {% comment %} </div>
+            </div> {% endcomment %}
+            <div class="check1">
+                <div class="title">
+                    TRIP BOUND
+                </div>
+            <div class="dropdown">
+                <button>Profile</button>
+                <div class="dropdown-options">
+                  {% comment %} <a href="#">Dashboard</a> {% endcomment %}
+                  <a class="section5" href="{% url 'home' %}">HOME</a>
+                  <a href="#section2">ABOUT</a>
+                    <a href="#section2">SERVICE</a>
+                    <a href="#section3">CONTACT</a>
+                    {% if user.is_authenticated %}
+                    <a class="section5" href="{% url 'train' %}">TRAINS</a>
+                    <a class="section5" href="{% url 'food' %}">FOOD BOOKINGS</a>
+                    <a class="section5" href="{% url 'index' %}">BOOK TICKETS</a>
+                    <a class="section5" href="{% url 'booking' %}">VIEW BOOKINGS</a>
+                    <a class="section5" href="{% url 'logout' %}">Log Out</a>
+                {% else %}
+                <a class="section5" href="{% url 'login' %}">Log In</a>
+                <a class="section5" href="{% url 'register' %}">Register</a>
+                {% endif %}
+                  {% comment %} <a href="#">Setting</a> {% endcomment %}
+                  {% comment %} <a href="#">Logout</a> {% endcomment %}
+                </div>
+            </div>
+        </div>
+            <marquee class="marq" direction = "left" loop="" >
+                {% comment %} <div class="geek1">🚄</div> {% endcomment %}
+                <img src="https://www.emoji.co.uk/files/mozilla-emojis/travel-places-mozilla/11760-steam-locomotive.png" width="90px">
+                <img src="https://emojis.wiki/emoji-pics/twitter/railway-car-twitter.png" width="90px">
+                <img src="https://emojis.wiki/emoji-pics/twitter/railway-car-twitter.png" width="90px">
+                <img src="https://emojis.wiki/emoji-pics/twitter/railway-car-twitter.png" width="90px">
+                <img src="https://emojis.wiki/emoji-pics/twitter/railway-car-twitter.png" width="90px">
+                <img src="https://emojis.wiki/emoji-pics/twitter/railway-car-twitter.png" width="90px">
+                <img src="https://emojis.wiki/emoji-pics/twitter/railway-car-twitter.png" width="90px"><img src="https://emojis.wiki/emoji-pics/twitter/railway-car-twitter.png" width="90px">
+                <img src="https://emojis.wiki/emoji-pics/twitter/railway-car-twitter.png" width="90px"><img src="https://emojis.wiki/emoji-pics/twitter/railway-car-twitter.png" width="90px"><img src="https://emojis.wiki/emoji-pics/twitter/railway-car-twitter.png" width="90px">
+                <img src="https://emojis.wiki/emoji-pics/twitter/railway-car-twitter.png" width="90px">
+                <img src="https://emojis.wiki/emoji-pics/twitter/railway-car-twitter.png" width="90px">
+                <img src="https://emojis.wiki/emoji-pics/twitter/railway-car-twitter.png" width="90px">
+                <img src="https://emojis.wiki/emoji-pics/twitter/railway-car-twitter.png" width="90px">
+                <img src="https://emojis.wiki/emoji-pics/twitter/railway-car-twitter.png" width="90px">
+                <img src="https://emojis.wiki/emoji-pics/twitter/railway-car-twitter.png" width="90px">
+                <img src="https://emojis.wiki/emoji-pics/twitter/railway-car-twitter.png" width="90px">
+                <img src="https://emojis.wiki/emoji-pics/twitter/railway-car-twitter.png" width="90px">
+
+                {% comment %} <div class="geek2">A computer science portal for geeks</div> {% endcomment %}
+            </marquee>
+            <marquee class="marq" direction = "left" loop="" >
+                
+                <div><a class="section5" href="{% url 'home' %}">HOME</a> <a href="#section2">ABOUT</a>  <a href="#section3">CONTACT</a><a class="section5" href="{% url 'index' %}">BOOK TICKETS</a> <a class="section5" href="{% url 'booking' %}">VIEW BOOKINGS</a></div>
+            </marquee>
+        </div>
+            {% block body %}
+            <!-- Optional JavaScript -->
+              <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+                  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+                  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+              {% endblock %}
+    </body>
+</html>
